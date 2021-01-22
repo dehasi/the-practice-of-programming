@@ -1,2 +1,8 @@
 .vscode/
 *.o
+*.dSYM/
+*.iml
+*.ipr
+*.iws
+*.jar
+
