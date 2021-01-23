@@ -40,7 +40,7 @@ int csvnfield() {
     return nfield;
 }
 
-/* csvgetline: get one e line, grow as needed */
+/* csvgetline: get one line, grow as needed */
 /* sample input "LU",86.25,"11/4/1998","2:19PM",+4.0625 */
 char *csvgetline(FILE *fin) {
     if (line == NULL) { // allocate on the first call
