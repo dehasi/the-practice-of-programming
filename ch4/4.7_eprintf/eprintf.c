@@ -22,6 +22,10 @@ void weprintf(const char *fmt, ...) {
     va_start(args, fmt);
     vfprintf(stderr, fmt, args);
     va_end(args);
+
+    if (fmt[0] != '\0' && fmt[strlen(fmt) - 1] == ':')
+        fprintf(stderr, " %s", strerror(errno));
+    fprintf(stderr, "\n");
 }
 
 /* eprintf: print error message and exit */
